@@ -18,6 +18,19 @@ public class DB {
 		st.executeUpdate(str);
 	}
 
+      
 
+        // ajout d'un patient (version 2)
+	public void insertPatientV3(int id, String nom, String prenom) throws Exception{
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hopital", "root", "root" );
+
+	
+		PreparedStatement ps=conn.prepareStatement("INSERT INTO PATIENT VALUES (?,?,?)");
+		ps.setInt(1, id);
+		ps.setString(2, nom);
+		ps.setString(3, prenom);
+		ps.executeUpdate();
+	}
 
 }
