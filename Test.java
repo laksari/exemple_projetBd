@@ -10,7 +10,10 @@ public class TEST {
 
           // Ajouter un patient 
 	  DB db = new DB();
-          db.insertPatientV1(7,"toto","titi"); 
+          db.insertPatientV1(7,"toto","titi");
+
+	  //Ajouter un 2 eme patient
+	  db.insertPatientV3(105,"toto11","titi");
 
 
 	}  
